@@ -1,0 +1,243 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 1rem;
+}
+
+.login-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  animation: slideUp 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-wave {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  animation: pulse 2s infinite;
+}
+
+.logo-play {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 25px;
+  border-color: transparent transparent transparent #007bff;
+  margin-left: 5px;
+  animation: bounce 2s infinite;
+}
+
+.logo-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+  background: linear-gradient(45deg, #007bff, #00bcd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.auth-toggle {
+  display: flex;
+  margin: 2rem 0;
+  background: #f0f2f5;
+  padding: 0.5rem;
+  border-radius: 10px;
+  gap: 0.5rem;
+}
+
+.auth-toggle button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-toggle button.active {
+  background: white;
+  color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e1e5ea;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  background: white;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.submit-button {
+  background: linear-gradient(45deg, #007bff, #00bcd4);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+}
+
+.social-login {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.social-login p {
+  color: #666;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #ddd;
+}
+
+.social-login p::before {
+  left: 0;
+}
+
+.social-login p::after {
+  right: 0;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-buttons button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: white;
+}
+
+.social-buttons button:hover {
+  transform: translateY(-3px);
+}
+
+.social-buttons .google:hover {
+  background: #ea4335;
+}
+
+.social-buttons .github:hover {
+  background: #333;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
